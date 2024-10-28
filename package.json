@@ -1,7 +1,26 @@
 {
+  "name": "RGMN-splash",
+  "version": "1.0.0",
+  "description": "An Eleventy site using Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm-run-all clean:dist css:build eleventy",
+    "start": "npm-run-all --parallel css:watch eleventy:serve",
+    "deploy": "npm run build && gh-pages -d _site",
+    "eleventy": "eleventy",
+    "eleventy:serve": "eleventy --serve",
+    "clean:dist": "rimraf _site",
+    "css:build": "tailwindcss -i style.css -o style.out.css --minify",
+    "css:watch": "tailwindcss -i style.css -o style.out.css --watch"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^5.0.0",
-    "tailwindcss": "^3.4.14"
+    "gh-pages": "^6.2.0",
+    "tailwindcss": "^3.4.14",
+    "autoprefixer": "^10.4.14",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "rimraf": "^5.0.1"
   }
 }
