@@ -1,0 +1,23 @@
+stages:
+  - test
+  - build
+  - deploy
+
+include:
+  - project: brettops/pipelines/pages
+    file: include.yml
+
+eleventy-build:
+  stage: build
+  image: ${CONTAINER_PROXY}node:lts-bullseye
+  script:
+    - npm install
+    - npx tailwindcss -i style.css -o style.out.css
+    - npx @11ty/eleventy
+    - >-
+      npx @11ty/eleventy
+      --pathprefix /examples/eleventy-tailwind-site
+      --output public
+  artifacts:
+    paths:
+      - public

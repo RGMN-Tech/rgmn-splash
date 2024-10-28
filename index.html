@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My cool bloggosite</title>
+  <link href="{{ '/style.css' | url }}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.typekit.net/svm8vnn.css">
+</head>
+
+<body>
+  <div class="bg-black min-h-screen">
+    <main>
+      <!-- Hero section -->
+      <div class="relative isolate overflow-hidden">
+        <svg
+          class="absolute inset-0 -z-10 min-h-screen h-full w-full stroke-white/50 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+          aria-hidden="true">
+          <defs>
+            <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1"
+              patternUnits="userSpaceOnUse">
+              <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
+            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+              stroke-width="0" />
+          </svg>
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
+        </svg>
+        <div
+          class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+          aria-hidden="true">
+          <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#a92231] to-[#a92231] opacity-20"
+            style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
+          </div>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 pb-0 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40 lg:pr-0 lg:pb-0">
+          <div class="mx-auto lg:max-w-xl xl:max-w-2xl flex-shrink-1 lg:mx-0">
+            <img class="w-48" src="assets/images/rgmn-logo--white-cutout.svg" alt="RGMN+ Logo">
+            <div class="mt-24 sm:mt-32 lg:mt-16">
+              <a href="#" class="inline-flex space-x-6">
+                <span
+                  class="rounded-full bg-redgimin/20 px-3 py-1 text-sm font-semibold leading-6 text-redgimin ring-1 ring-inset ring-redgimin">Launching
+                  This Winter</span>
+              </a>
+            </div>
+            <h1 class="mt-10 text-pretty tk-acumin-variable text-5xl font-semibold text-white sm:text-7xl">Each step is a
+              stride to greatness</h1>
+            <p class="mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8">At RGMN+, our mission is to provide
+              men with the tools to make informed, healthier choices about their personal care. We deliver clean,
+              effective products that integrate seamlessly into daily routines, empowering men to perform at their best.
+              Our commitment to using only safe, reliable ingredients ensures that our customers can trust in a grooming
+              regimen that supports their active lifestyles—free from hidden chemicals or compromises.</p>
+            <div class="mt-10 flex items-center gap-x-6">
+              <a 
+                id="open-modal"
+                href="#"
+                class="rounded-md bg-redgimin px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-redgimin focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-redgimin">Receive
+                RGMN+ Updates</a>
+            </div>
+          </div>
+          <div class="mx-auto mt-16 flex xl:max-w-full sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0">
+            <div class="object-contain self-center">
+              <img src="/assets/images/RGMN-full_kit.png" alt="RGMN-Kit" width="2432" height="auto"
+                class="w-full rounded-md bg-white/5 shadow-2xl lg:self-center">
+            </div>
+          </div>
+        </div>
+        <div class="relative flex overflow-x-hidden">
+          <div class="py-12 animate-marquee whitespace-nowrap">
+            <span class="text-white text-4xl mx-4">F*CK DIRTY INGREDIENTS</span>
+            <span class="text-white text-4xl mx-4">F*CK DIRTY INGREDIENTS</span>
+            <span class="text-white text-4xl mx-4">F*CK DIRTY INGREDIENTS</span>
+
+          </div>
+
+          <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
+            <span class="text-white text-4xl mx-4">F*CK DIRTY INGREDIENTS</span>
+            <span class="text-white text-4xl mx-4">F*CK DIRTY INGREDIENTS</span>
+            <span class="text-white text-4xl mx-4">F*CK DIRTY INGREDIENTS</span>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Modal Overlay -->
+  <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <!-- Modal Container -->
+    <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-3xl relative">
+      <!-- Close Button -->
+      <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+        &times;
+      </button>
+      <!-- Modal Content -->
+      <div class="p-6">
+        <h2 class="text-2xl font-semibold mb-4">Hang tight, we will be live soon!</h2>
+        <p class="text-gray-600 mb-6">Be an early member of the RGMN+ Community and get the inside scoop.</p>
+        <form id="email-form">
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+            <input type="email" id="email" name="email" required
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+          <button type="submit"
+            class="w-full bg-redgimin text-white px-4 py-2 rounded-md hover:bg-black-100 focus:outline-none">
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get DOM elements
+    const openModalBtn = document.getElementById('open-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const closeModalBtn = document.getElementById('close-modal');
+  
+    // Function to open the modal
+    function openModal() {
+      modalOverlay.classList.remove('hidden');
+      // Move focus to the email input field
+      document.getElementById('email').focus();
+    }
+  
+    // Function to close the modal
+    function closeModal() {
+      modalOverlay.classList.add('hidden');
+      // Return focus to the open modal button
+      openModalBtn.focus();
+    }
+  
+    // Event listeners
+    openModalBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+  
+    // Close the modal when clicking outside of it
+    modalOverlay.addEventListener('click', (event) => {
+      if (event.target === modalOverlay) {
+        closeModal();
+      }
+    });
+  
+    // Close the modal with the Escape key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !modalOverlay.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+  
+    // Handle form submission
+    const emailForm = document.getElementById('email-form');
+    emailForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = emailForm.email.value;
+      // Add your form submission logic here
+      alert(`Thank you for subscribing with email: ${email}`);
+      closeModal();
+      emailForm.reset();
+    });
+  </script>
+</body>
+
+</html>
