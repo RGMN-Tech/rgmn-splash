@@ -7,11 +7,12 @@ module.exports = {
         'redgimin': "#a92231",
       },
       fontFamily: {
-        'brandFont': ['acumin-variable', 'sans-serif'],
+        brandFont: ['acumin-variable', 'sans-serif'],
       },
       animation: {
         marquee: 'marquee 12s linear infinite',
         marquee2: 'marquee2 12s linear infinite',
+        pulsering: 'pulsering 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite'
       },
       keyframes: {
         marquee: {
@@ -22,8 +23,14 @@ module.exports = {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        pulsering: {
+          '0%': { transform: 'scale(0.33)', opacity: '0.4' },
+          '80%, 100%': { transform: 'scale(1)', opacity: '0' },
+        },
       },
     },
   },
   plugins: [],
 };
+
+

@@ -1,11 +1,11 @@
 {
-  "name": "RGMN-splash",
+  "name": "rgmn-splash",
   "version": "1.0.0",
   "description": "An Eleventy site using Tailwind CSS",
   "main": "index.html",
   "scripts": {
     "build": "npm-run-all clean:dist css:build eleventy",
-    "start": "npm-run-all --parallel css:watch eleventy:serve",
+    "start": "npm-run-all --parallel eleventy:serve css:watch",
     "deploy": "npm run build && gh-pages -d _site",
     "eleventy": "eleventy",
     "eleventy:serve": "eleventy --serve",
