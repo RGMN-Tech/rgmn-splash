@@ -9,4 +9,8 @@
   .highlighted {
     @apply bg-redgimin text-white px-1 uppercase;
   }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
 }

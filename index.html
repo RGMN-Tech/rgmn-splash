@@ -36,7 +36,7 @@
             style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
           </div>
         </div>
-        <div class="mx-auto max-w-7xl px-6 pb-0 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40 lg:pr-0 lg:pb-0">
+        <div class="mx-auto max-w-7xl px-6 pb-0 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-20 lg:pr-0 lg:pb-0">
           <div class="mx-auto lg:max-w-xl xl:max-w-2xl flex-shrink-1 lg:mx-0">
             <img class="w-48" src="assets/images/rgmn-logo--white-cutout.svg" alt="RGMN+ Logo">
             <div class="mt-24 sm:mt-32 lg:mt-16">
@@ -96,86 +96,26 @@
           </div>
         </div>
       </div>
-
-  </div>
-
-  <!-- Modal Overlay -->
-  <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-    <!-- Modal Container -->
-    <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-3xl relative">
-      <!-- Close Button -->
-      <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
-        &times;
-      </button>
-      <!-- Modal Content -->
-      <div class="p-6">
-        <h2 class="text-2xl font-semibold mb-4">Hang tight, we will be live soon!</h2>
-        <p class="text-gray-600 mb-6">Be an early member of the RGMN+ Community and get the inside scoop.</p>
-        <form id="email-form">
-          <div class="mb-4">
-            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-            <input type="email" id="email" name="email" required
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
-          </div>
-          <button type="submit"
-            class="w-full bg-redgimin text-white px-4 py-2 rounded-md hover:bg-black-100 focus:outline-none">
-            Sign Up
-          </button>
-        </form>
+      <div class="copyright">
+        <div class="max-w-7xl mx-auto px-6 py-8 sm:px-8">
+          <p class="text-white text-center">
+            <span class="text-pretty">© 2024 RGMN+ All Rights Reserved</span>
+          </p>
+        </div>  
       </div>
-    </div>
+    </main>
   </div>
   <script>
     // Get DOM elements
     const openModalBtns = document.querySelectorAll('[data-modal-trigger]');
-    const modalOverlay = document.getElementById('modal-overlay');
-    const closeModalBtn = document.getElementById('close-modal');
-
-    // Function to open the modal
-    function openModal() {
-      modalOverlay.classList.remove('hidden');
-      // Move focus to the email input field
-      document.getElementById('email').focus();
-    }
-
-    // Function to close the modal
-    function closeModal() {
-      modalOverlay.classList.add('hidden');
-      // Return focus to the open modal button
-      openModalBtn.focus();
-    }
-
-    // Event listeners
-    for (const btn of openModalBtns) {
-      btn.addEventListener('click', openModal);
-    }
-    closeModalBtn.addEventListener('click', closeModal);
-
-    // Close the modal when clicking outside of it
-    modalOverlay.addEventListener('click', (event) => {
-      if (event.target === modalOverlay) {
-        closeModal();
-      }
-    });
-
-    // Close the modal with the Escape key
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !modalOverlay.classList.contains('hidden')) {
-        closeModal();
-      }
-    });
-
-    // Handle form submission
-    const emailForm = document.getElementById('email-form');
-    emailForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const email = emailForm.email.value;
-      // Add your form submission logic here
-      alert(`Thank you for subscribing with email: ${email}`);
-      closeModal();
-      emailForm.reset();
+    openModalBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        window._klOnsite = window._klOnsite || [];
+        window._klOnsite.push(['openForm', 'YxQ2m4']);
+      });
     });
   </script>
+  <script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/UjqnAB/klaviyo.js"></script>
 </body>
 
 </html>
