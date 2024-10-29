@@ -17,7 +17,7 @@ An Eleventy site using Tailwind CSS.
 First, clone the repository and navigate into the project directory:
 
 ```sh
-git clone <repository-url>
+git clone rgmn-tech/rgmn-splash
 cd rgmn-splash
 ```
 
