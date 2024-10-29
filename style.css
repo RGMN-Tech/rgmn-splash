@@ -13,4 +13,17 @@
   h2 {
     @apply text-4xl font-bold;
   }
+
+  .text-lamon {
+    @apply font-lamon;
+    letter-spacing: 0.1em;
+  }
+
+  .test {
+    color: red;
+  }
+
+  .retest {
+    color: green;
+  }
 }
