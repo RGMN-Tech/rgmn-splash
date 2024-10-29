@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         brandFont: ['acumin-variable', 'sans-serif'],
+        lamon: ['lamon', 'sans-serif'],
       },
       animation: {
         marquee: 'marquee 12s linear infinite',
