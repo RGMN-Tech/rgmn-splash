@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Copy contents of _src directory to _site directory
-  eleventyConfig.addPassthroughCopy("_src");
+  eleventyConfig.addPassthroughCopy("src");
 
   // Watch the style.out.css file for changes
   eleventyConfig.addWatchTarget("style.out.css");
