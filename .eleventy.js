@@ -4,6 +4,9 @@ module.exports = function (eleventyConfig) {
     "style.out.css": "style.css",
   });
 
+  // Copy CNAME from root to _site
+  eleventyConfig.addPassthroughCopy("CNAME");
+
   // Copy contents of _src directory to _site directory
   eleventyConfig.addPassthroughCopy("src");
 
