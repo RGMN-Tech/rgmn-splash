@@ -18,12 +18,4 @@
     @apply font-lamon;
     letter-spacing: 0.1em;
   }
-
-  .test {
-    color: red;
-  }
-
-  .retest {
-    color: green;
-  }
 }
